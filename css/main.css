@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pattaya', sans-serif;
+}
+
+#body{
+    background-image: url('../img/fondo1.png');
+}
+
+.nav1{
+    margin-left: 10px;
+}
+.nv{
+    margin-left: 20px;
+}
+
+#jum{
+    width: 100px;
+    height: 100px;
+    color: #f2f2f2;
+}
