@@ -9,12 +9,14 @@ function dark(){
         nav.className = 'navbar nav navbar-expand-lg navbar-dark bg-primary';
         btn.className = 'btn btn-primary';
         hr.style.color = '#007bff';
+        fondo.style.color = "#007bff"
         tema = 2;
     }else{
         fondo.style.backgroundImage = "url('../img/fondo1.png')";
         nav.className = 'navbar nav navbar-expand-lg navbar-dark bg-dark';
         btn.className = 'btn btn-dark';
         hr.style.color = '#f2f2f2';
+        fondo.style.color = "#f2f2f2"
         tema = 1;
     }
 }
