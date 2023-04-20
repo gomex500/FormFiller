@@ -20,3 +20,13 @@ function dark(){
         tema = 1;
     }
 }
+
+(() => {
+    'use strict'
+
+    const forms = document.querySelectorAll('.needs-validation')
+
+    Array.from(forms).forEach(form => {
+        form.addEventListener('Submit', event =>)
+    })
+})
