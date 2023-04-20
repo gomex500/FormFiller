@@ -27,6 +27,12 @@ function dark(){
     const forms = document.querySelectorAll('.needs-validation')
 
     Array.from(forms).forEach(form => {
-        form.addEventListener('Submit', event =>)
+        form.addEventListener('Submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.StopPropagation()
+            }
+            form.classList.add('was-validated')
+        }, false)
     })
-})
+})()
