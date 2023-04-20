@@ -57,5 +57,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.main.js">
 
     </script>
+
+    <script>
+
+        const doc = new JsPDF();
+
+        doc.setFillColor (28 , 41, 51);
+
+        doc.rect(0, 0, 220, 60, 'f');
+
+        doc.addImagen (imagenData, 10, 8, 106, 34);
+
+        doc.setFontSize(14);
+
+        doc.setFontType("bold");
+
+        doc.setTextColor(255, 255, 255);
+
+        doc.text(`WWSOLAR CALL CENTER NICA 2023`, 12, 50);
+
+        let parte = fecha.split('_')
+
+        let fechadoc = parte[2] + '_' + partes[1] + '_' + partes [0];
+
+        const docpdf = '${nombreCliente} ${apellidoCliente} ${fechadoc}.pdf';
+
+        doc.save(docpdf);
+        
+    </script>
    </body>
 </html>
