@@ -21,6 +21,21 @@ function dark(){
     }
 }
 
+const hijos = document.querySelector('#hijos');
+const h = document.querySelector('.h');
+
+console.log(hijos.value);
+h.textContent = hijos.value;
+
+hijos.addEventListener('input', function() {
+  h.textContent = hijos.value
+});
+
+
+
+
+
+///pdf
 const form = document.querySelector('.needs-validation');
 
 form.addEventListener('submit', function(event) {
@@ -31,7 +46,10 @@ form.addEventListener('submit', function(event) {
     alert('Ingrese su nombre');
     return false;
   }
+  var doc = new jsPDF()
+
+doc.text('Nombre: '+nombre.value, 10, 10)
+doc.save('a4.pdf')
 
   form.submit();
 });
-
