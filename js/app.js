@@ -21,18 +21,17 @@ function dark(){
     }
 }
 
-(() => {
-    'use strict'
+const form = document.querySelector('.needs-validation');
 
-    const forms = document.querySelectorAll('.needs-validation')
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
 
-    Array.from(forms).forEach(form => {
-        form.addEventListener('Submit', event => {
-            if (!form.checkValidity()) {
-                event.preventDefault()
-                event.StopPropagation()
-            }
-            form.classList.add('was-validated')
-        }, false)
-    })
-})()
+  const nombre = document.getElementById('NombreAgente');
+  if (nombre.value === '') {
+    alert('Ingrese su nombre');
+    return false;
+  }
+
+  form.submit();
+});
+
